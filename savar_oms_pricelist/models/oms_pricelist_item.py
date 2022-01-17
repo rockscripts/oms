@@ -8,14 +8,14 @@ class OmsPricelistItem(models.Model):
     pricelist_id = fields.Many2one('oms.pricelist', string='Pricelist')
     service_name = fields.Char(string='Servicio', related='pricelist_id.service_id.name')
 
-    seller_id = fields.Many2one('res.partner', string='Seller', required=True)
+    seller_id = fields.Many2one('res.partner', string='Seller')
     subservice_id = fields.Many2one('fsm.order.service', string='SubServicio')
     warehouse_id = fields.Many2one('stock.warehouse', string='Local')
-    district_id = fields.Many2one('res.district', string='Zona', required=True)
+    district_id = fields.Many2one('res.district', string='Zona')
     sufix = fields.Char(string='Sufijo')
-    size_id = fields.Many2one('product.size', string='Talla', required=True)
-    size_quant = fields.Integer(string='Cantidad Talla', required=True)
-    price = fields.Float(string='Tarifa', required=True)
+    size_id = fields.Many2one('product.size', string='Talla')
+    size_quant = fields.Integer(string='Cantidad Talla')
+    price = fields.Float(string='Tarifa')
 
 
     ubigeo_id= fields.Many2one('ubigeo', string='Ubigeo')
