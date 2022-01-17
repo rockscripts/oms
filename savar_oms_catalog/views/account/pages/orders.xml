@@ -1,0 +1,16 @@
+<odoo>
+
+    <template id="portal_merchant_orders_webpage">
+        <title>Pedidos</title>
+        <t t-call="website.layout">
+          <div class="oe_structure"/>
+          <div class="oe_structure">
+              <div class="container">
+                  ***
+              </div>
+          </div>
+          <div class="oe_structure"/>
+        </t>
+    </template>
+
+</odoo>
