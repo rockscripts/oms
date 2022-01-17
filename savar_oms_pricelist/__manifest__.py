@@ -19,7 +19,6 @@
         'savar_tms_fms',
     ],
     'data': [
-        'data/data.xml',
         'views/product_size_views.xml',
         'views/oms_pricelist_views.xml',
         'views/sale_order_views.xml',
@@ -27,3 +26,5 @@
         'security/ir.model.access.csv',
     ],
 }
+
+# master pass: vpfh-eb2r-3umk

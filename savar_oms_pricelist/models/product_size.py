@@ -6,6 +6,3 @@ class ProductSize(models.Model):
     _description = 'Talla producto'
 
     name = fields.Char(string='Talla', required=True)
-    description = fields.Text(string='Descripción')
-
-    
