@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oms_product_size_form_view" model="ir.ui.view">
+            <field name="name">product.size.form</field>
+            <field name="model">product.size</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="oms_product_size_tree_view" model="ir.ui.view">
+            <field name="name">product.size.tree</field>
+            <field name="model">product.size</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+        <record id="oms_product_size_action" model="ir.actions.act_window">
+            <field name="name">Tallas</field>
+            <field name="res_model">product.size</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

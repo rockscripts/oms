@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oms_pricelist_form_view" model="ir.ui.view">
+            <field name="name">oms.pricelist.form</field>
+            <field name="model">oms.pricelist</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group name="first" col="2">
+                            <field name="currency_id" class="oe_inline" />
+                        </group>
+                        <notebook>
+                            <page string="Items" name="items">
+                                <field name="pricelist_item_ids">
+                                    <tree editable="bottom">
+                                        <field name="seller_id" />
+                                        <field name="subservice_id"/>
+                                        <field name="warehouse_id"/>
+                                        <field name="district_id" />
+                                        <field name="sufix"/>
+                                        <field name="size_id" />
+                                        <field name="size_quant" />
+                                        <field name="price" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="oms_pricelist_tree_view" model="ir.ui.view">
+            <field name="name">oms.pricelist.tree</field>
+            <field name="model">oms.pricelist</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="currency_id" />
+                </tree>
+            </field>
+        </record>
+        <record id="oms_pricelist_action" model="ir.actions.act_window">
+            <field name="name">Tarifas OMS</field>
+            <field name="res_model">oms.pricelist</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
