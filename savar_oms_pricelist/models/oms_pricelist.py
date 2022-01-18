@@ -15,7 +15,11 @@ class OmsPricelist(models.Model):
     pricelist_item3_ids = fields.One2many('oms.pricelist.item', 'pricelist_id', string='FulFillment')
     pricelist_item4_ids = fields.One2many('oms.pricelist.item', 'pricelist_id', string='Consolidado')
     
-    
+    def get_pricelist_item_price(self, seller_id, subservice_id, warehouse_id, district_id, size_id, size_quant):
+        pricelist_item_id = self.env['oms.pricelist.item'].search([('pricelist_id', '=', self.id), ('seller_id', '=', seller_id.id), ('subservice_id', '=', subservice_id.id), (
+        'warehouse_id', '=', warehouse_id.id), ('district_id', '=', district_id.id), ('size_id', '=', size_id.id), ('size_quant', '=', size_quant)], limit=1)
+        return pricelist_item_id.price
+        
     """
     @api.onchange('service_id')
     def compute_name_id(self):
