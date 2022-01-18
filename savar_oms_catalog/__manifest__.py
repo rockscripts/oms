@@ -26,6 +26,7 @@
                     'portal',
                     'website_webkul_addons',
                     'website_mega_menus',
+                    'fieldservice'
                 ],
     'data': [                
                 'data/groups.xml',
